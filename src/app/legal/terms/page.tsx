@@ -16,11 +16,11 @@ export default function TermsPage() {
           <h1>Terms of Service</h1>
           <p className="text-slate-500">Last updated: March 8, 2026</p>
 
-          <h2>1. Acceptance of Terms</h2>
+          <h2 className="font-bold mt-6">1. Acceptance of Terms</h2>
           <p>By purchasing, downloading, or using OpenClaw Dev Kit ("Product"), you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, do not purchase or use the Product.</p>
           <p>These Terms of Service constitute a legally binding agreement between you and the seller of OpenClaw Dev Kit ("we," "us," or "our").</p>
 
-          <h2>2. Description of the Product</h2>
+          <h2 className="font-bold mt-6">2. Description of the Product</h2>
           <p>Please read before purchasing.</p>
           <p>OpenClaw Dev Kit is a developer starter kit and SaaS boilerplate that provides source code intended to help developers launch software products faster.</p>
           <p>It is not a finished product or hosted service.</p>
@@ -42,7 +42,7 @@ export default function TermsPage() {
           <p>We reserve the right to modify, update, or improve the Product at any time.</p>
           <p>Updates may be provided at our discretion and are not guaranteed on any schedule.</p>
 
-          <h2>3. What the Product Does NOT Include</h2>
+          <h2 className="font-bold mt-6">3. What the Product Does NOT Include</h2>
           <p>To avoid misunderstanding, OpenClaw Dev Kit does not include:</p>
           <ul>
             <li>Hosting or infrastructure services</li>
@@ -53,7 +53,7 @@ export default function TermsPage() {
           </ul>
           <p>You must provide your own accounts for services such as hosting, databases, payment processors, APIs, domains, and any other infrastructure required to run your application.</p>
 
-          <h2>4. Developer Responsibility</h2>
+          <h2 className="font-bold mt-6">4. Developer Responsibility</h2>
           <p>OpenClaw Dev Kit is intended for developers or technical users.</p>
           <p>By purchasing the Product, you acknowledge that you have the technical ability to use it, or that you will work with someone who does.</p>
           <p>You are solely responsible for:</p>
@@ -68,28 +68,28 @@ export default function TermsPage() {
           </ul>
           <p>We are not responsible for the operation, security, or legal compliance of applications built using the Product.</p>
 
-          <h2>5. Payment and Billing</h2>
-          <h3>5.1 Payment Processing</h3>
+          <h2 className="font-bold mt-6">5. Payment and Billing</h2>
+          <h3 className="font-bold mt-4">5.1 Payment Processing</h3>
           <p>Payments for OpenClaw Dev Kit are processed by a third-party payment processor. By making a purchase, you agree to provide accurate payment information and comply with the payment provider’s terms and policies.</p>
           <p>We do not store full credit card details.</p>
-          <h3>5.2 Pricing</h3>
+          <h3 className="font-bold mt-4">5.2 Pricing</h3>
           <p>OpenClaw Dev Kit is sold as a one-time purchase.</p>
           <p>We reserve the right to change pricing at any time. Price changes will not affect purchases already completed.</p>
           <p>Promotions or discounts may be offered at our discretion.</p>
 
-          <h2>6. Refund Policy — All Sales Are Final</h2>
+          <h2 className="font-bold mt-6">6. Refund Policy — All Sales Are Final</h2>
           <p>Due to the nature of digital products, all sales are final.</p>
           <p>Upon purchase, you receive access to the Product’s source code repository. Because digital code cannot be returned once delivered, refunds are generally not provided.</p>
           <p>Refunds may be considered only in cases of billing errors, such as duplicate charges.</p>
           <p>If this occurs, please contact:</p>
           <p>jiarenlyu@gmail.com</p>
 
-          <h2>7. No Guarantee of Results</h2>
+          <h2 className="font-bold mt-6">7. No Guarantee of Results</h2>
           <p>Purchasing OpenClaw Dev Kit does not guarantee business success, revenue, or profitability.</p>
           <p>The outcome of any product built using this software depends entirely on factors outside our control, including execution, marketing, competition, and market conditions.</p>
           <p>You accept full responsibility for any business decisions made using the Product.</p>
 
-          <h2>8. Third-Party Services</h2>
+          <h2 className="font-bold mt-6">8. Third-Party Services</h2>
           <p>The Product may integrate with third-party services such as:</p>
           <ul>
             <li>Supabase</li>
@@ -102,13 +102,13 @@ export default function TermsPage() {
           <p>We are not responsible for the availability, pricing, or behavior of third-party services.</p>
           <p>Changes to these services may affect the Product’s functionality.</p>
 
-          <h2>9. Updates and Maintenance</h2>
+          <h2 className="font-bold mt-6">9. Updates and Maintenance</h2>
           <p>We may release updates, improvements, or bug fixes to the Product.</p>
           <p>However, we are not obligated to provide updates on any schedule or maintain the Product indefinitely.</p>
           <p>Updates are provided “as is.”</p>
           <p>You are responsible for integrating updates into your own codebase.</p>
 
-          <h2>10. Disclaimer of Warranties</h2>
+          <h2 className="font-bold mt-6">10. Disclaimer of Warranties</h2>
           <p>THE PRODUCT IS PROVIDED “AS IS” AND “AS AVAILABLE.”</p>
           <p>WE MAKE NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:</p>
           <ul>
@@ -124,7 +124,7 @@ export default function TermsPage() {
             <li>be compatible with your specific environment</li>
           </ul>
 
-          <h2>11. Limitation of Liability</h2>
+          <h2 className="font-bold mt-6">11. Limitation of Liability</h2>
           <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages.</p>
           <p>This includes, but is not limited to:</p>
           <ul>
@@ -136,7 +136,7 @@ export default function TermsPage() {
           </ul>
           <p>In no event shall our total liability exceed the amount you paid for the Product.</p>
 
-          <h2>12. Indemnification</h2>
+          <h2 className="font-bold mt-6">12. Indemnification</h2>
           <p>You agree to defend and indemnify us against any claims, damages, liabilities, or expenses arising from:</p>
           <ul>
             <li>your use of the Product</li>
@@ -145,26 +145,26 @@ export default function TermsPage() {
             <li>violations of applicable laws</li>
           </ul>
 
-          <h2>13. Termination</h2>
+          <h2 className="font-bold mt-6">13. Termination</h2>
           <p>We may terminate your license to use the Product if you violate these Terms.</p>
           <p>If termination occurs, you must stop distributing or sharing the Product’s source code.</p>
           <p>Applications you have already deployed to your own users are not affected.</p>
 
-          <h2>14. Governing Law</h2>
+          <h2 className="font-bold mt-6">14. Governing Law</h2>
           <p>These Terms shall be governed by and interpreted in accordance with applicable laws in the jurisdiction where the seller operates, without regard to conflict of law principles.</p>
 
-          <h2>15. Severability</h2>
+          <h2 className="font-bold mt-6">15. Severability</h2>
           <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect.</p>
 
-          <h2>16. Changes to These Terms</h2>
+          <h2 className="font-bold mt-6">16. Changes to These Terms</h2>
           <p>We may update these Terms of Service from time to time.</p>
           <p>Changes become effective when posted on this page.</p>
           <p>Your continued use of the Product after updates constitutes acceptance of the revised Terms.</p>
 
-          <h2>17. Entire Agreement</h2>
+          <h2 className="font-bold mt-6">17. Entire Agreement</h2>
           <p>These Terms of Service, together with the Privacy Policy and any applicable license terms, constitute the entire agreement between you and us regarding OpenClaw Dev Kit.</p>
 
-          <h2>18. Contact</h2>
+          <h2 className="font-bold mt-6">18. Contact</h2>
           <p>If you have questions about these Terms, contact:</p>
           <p>Email: jiarenlyu@gmail.com</p>
         </div>
