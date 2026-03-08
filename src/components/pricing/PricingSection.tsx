@@ -2,47 +2,15 @@
 
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
-import { Github, Loader2, Check } from 'lucide-react';
+import { Github, Check } from 'lucide-react';
 
 export function PricingSection() {
   const [githubUsername, setGithubUsername] = useState('');
-  const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [error, setError] = useState('');
 
   const handlePurchase = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!githubUsername.trim()) {
-      setError('Please enter your GitHub username');
-      return;
-    }
-    
-    setError('');
-    setIsCheckingOut(true);
-
-    try {
-      const response = await fetch('/api/purchase/create-checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ githubUsername: githubUsername.trim() }),
-      });
-      
-      const data = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to initialize checkout');
-      }
-
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        throw new Error('No checkout URL returned');
-      }
-    } catch (err: unknown) {
-      console.error('Checkout error:', err);
-      const message = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
-      setError(message);
-      setIsCheckingOut(false);
-    }
+    setError('Checkout coming soon — we are currently setting up our payment system.');
   };
 
   const features = [
@@ -103,7 +71,6 @@ export function PricingSection() {
                       className="pl-12 h-14 bg-white/5 border-white/10 text-white placeholder:text-slate-500 rounded-full focus:ring-blue-500 focus:border-blue-500"
                       value={githubUsername}
                       onChange={(e) => setGithubUsername(e.target.value)}
-                      disabled={isCheckingOut}
                     />
                   </div>
                 </div>
@@ -113,15 +80,8 @@ export function PricingSection() {
                 <button
                   type="submit"
                   className="mt-6 w-full px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center ultra-button"
-                  disabled={isCheckingOut}
                 >
-                  {isCheckingOut ? (
-                    <>
-                      <Loader2 className="mr-2 h-5 w-5 animate-spin" /> Processing...
-                    </>
-                  ) : (
-                    'Get ClawWrapper'
-                  )}
+                  Get ClawWrapper
                 </button>
               </form>
             </div>
