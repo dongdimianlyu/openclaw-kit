@@ -5,6 +5,15 @@ import { PlanId } from '@/services/billing/plans';
 
 export async function POST(request: Request) {
   try {
+    // Ensure billing/auth providers are configured before proceeding to avoid build-time failures
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    const stripeKey = process.env.STRIPE_SECRET_KEY;
+
+    if (!supabaseUrl || !supabaseAnonKey || !stripeKey) {
+      return new NextResponse('Billing is not configured. Missing environment variables.', { status: 500 });
+    }
+
     const user = await authService.getCurrentUser();
     
     if (!user) {
