@@ -17,11 +17,52 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #000;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .landing-text-gradient {
+    background: linear-gradient(to bottom right, #ffffff 30%, #7e9cff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-ultra {
+    background-color: #010410;
+    background-image: 
+      radial-gradient(100% 100% at 100% 100%, #0a2e7a 0%, transparent 50%),
+      radial-gradient(80% 80% at 0% 0%, #020b24 0%, transparent 50%);
+  }
+  
+  .particle-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: overlay;
+  }
+  
+  .ultra-button {
+    background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+    color: #0f172a;
+    border: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), inset 0 -2px 0 rgba(0,0,0,0.1);
+  }
+  
+  .ultra-button:hover {
+    background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0,0,0,0.1);
+    transform: translateY(-1px);
   }
 }
