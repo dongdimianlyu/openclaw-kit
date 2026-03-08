@@ -16,7 +16,7 @@ export default function PrivacyPage() {
           <p className="text-slate-500">Last updated: March 8, 2026</p>
 
           <h2>1. Introduction</h2>
-          <p>Welcome to OpenClaw Dev Kit ("we," "our," or "us"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and purchase our Product.</p>
+          <p>Welcome to OpenClaw Dev Kit (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and purchase our Product.</p>
           <p>OpenClaw Dev Kit is a developer starter kit that provides source code for launching software products.</p>
           <p>We are committed to protecting your privacy and handling your data transparently.</p>
           <p>By using our website or purchasing the Product, you agree to the practices described in this Privacy Policy.</p>
