@@ -4,6 +4,11 @@ import { createClient } from '@supabase/supabase-js';
 import Stripe from 'stripe';
 
 export async function POST(req: Request) {
+  // Ensure Stripe is configured; otherwise return early to avoid build/runtime failures
+  if (!stripe || !process.env.STRIPE_WEBHOOK_SECRET) {
+    return new NextResponse('Stripe is not configured', { status: 500 });
+  }
+
   const body = await req.text();
   const signature = req.headers.get('Stripe-Signature') as string;
 
@@ -13,7 +18,7 @@ export async function POST(req: Request) {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET!
+      process.env.STRIPE_WEBHOOK_SECRET
     );
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown Error';
