@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Navbar } from '@/components/layout/Navbar';
 import { appConfig } from '@/lib/config';
 import { Shovel } from 'lucide-react';
