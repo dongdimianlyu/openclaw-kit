@@ -19,7 +19,12 @@ export const billingService = {
       throw new Error(`Plan ${planId} does not have a Stripe price ID`);
     }
 
-    const session = await stripe.checkout.sessions.create({
+    if (!stripe) {
+      throw new Error('Stripe is not configured');
+    }
+    const stripeClient = stripe;
+
+    const session = await stripeClient.checkout.sessions.create({
       payment_method_types: ['card'],
       billing_address_collection: 'auto',
       customer_email: email,
@@ -48,7 +53,12 @@ export const billingService = {
     customerId: string;
     returnUrl: string;
   }) => {
-    const portalSession = await stripe.billingPortal.sessions.create({
+    if (!stripe) {
+      throw new Error('Stripe is not configured');
+    }
+    const stripeClient = stripe;
+
+    const portalSession = await stripeClient.billingPortal.sessions.create({
       customer: customerId,
       return_url: returnUrl,
     });
