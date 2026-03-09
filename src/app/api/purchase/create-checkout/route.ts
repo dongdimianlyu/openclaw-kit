@@ -32,6 +32,9 @@ export async function POST(req: Request) {
       );
     }
 
+    // Normalize API key in case env already includes a "Bearer" prefix.
+    const paddleApiKey = PADDLE_API_KEY.replace(/^Bearer\s+/i, '').trim();
+
     const priceIdPattern = /^pri_[a-z\d]{26}$/;
     if (!priceIdPattern.test(PADDLE_PRICE_ID)) {
       console.error('Paddle price ID is invalid format:', PADDLE_PRICE_ID);
@@ -45,7 +48,7 @@ export async function POST(req: Request) {
     const response = await fetch('https://api.paddle.com/transactions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${PADDLE_API_KEY.trim()}`,
+        'Authorization': `Bearer ${paddleApiKey}`,
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Paddle-Version': '1',
