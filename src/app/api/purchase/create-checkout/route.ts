@@ -33,7 +33,18 @@ export async function POST(req: Request) {
     }
 
     // Normalize API key in case env already includes a "Bearer" prefix or surrounding quotes.
-    const paddleApiKey = PADDLE_API_KEY.replace(/^Bearer\s+/i, '').replace(/^"|"$/g, '').trim();
+    const paddleApiKey = PADDLE_API_KEY.replace(/^Bearer\s+/i, '')
+      .replace(/^"|"$/g, '')
+      .trim();
+
+    const apiKeyPattern = /^pdl_(live|test)_apikey_[A-Za-z0-9_]+$/;
+    if (!apiKeyPattern.test(paddleApiKey)) {
+      console.error('Paddle API key invalid format; expected to start with pdl_live_apikey_. Got length:', paddleApiKey.length);
+      return NextResponse.json(
+        { error: 'Payment configuration error: Paddle API key format is invalid. Remove any quotes or Bearer prefixes and ensure it starts with pdl_live_apikey_.' },
+        { status: 500 }
+      );
+    }
 
     const priceIdPattern = /^pri_[a-z\d]{26}$/;
     if (!priceIdPattern.test(PADDLE_PRICE_ID)) {
