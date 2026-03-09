@@ -1,16 +1,28 @@
 'use client';
 
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { Github, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { initializePaddle, Paddle } from '@paddle/paddle-js';
 
 function CheckoutContent() {
   const searchParams = useSearchParams();
   const githubUsername = searchParams.get('github');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [paddle, setPaddle] = useState<Paddle>();
+
+  useEffect(() => {
+    initializePaddle({ environment: 'production', token: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN || '' }).then(
+      (paddleInstance: Paddle | undefined) => {
+        if (paddleInstance) {
+          setPaddle(paddleInstance);
+        }
+      }
+    );
+  }, []);
 
   if (!githubUsername) {
     return (
@@ -28,6 +40,10 @@ function CheckoutContent() {
     setError('');
 
     try {
+      if (!paddle) {
+        throw new Error('Paddle failed to initialize');
+      }
+
       const res = await fetch('/api/purchase/create-checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -40,10 +56,20 @@ function CheckoutContent() {
         throw new Error(data.error || 'Failed to initialize checkout');
       }
 
-      if (data.url) {
+      if (data.transactionId) {
+        paddle.Checkout.open({
+          transactionId: data.transactionId,
+          settings: {
+            displayMode: "overlay",
+            theme: "dark",
+            successUrl: `${window.location.origin}/purchase/success`
+          }
+        });
+        setIsLoading(false);
+      } else if (data.url) {
         window.location.href = data.url;
       } else {
-        throw new Error('No checkout URL received from Paddle');
+        throw new Error('No checkout transaction received from Paddle');
       }
     } catch (err: unknown) {
       if (err instanceof Error) {

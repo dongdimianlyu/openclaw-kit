@@ -97,13 +97,11 @@ export async function POST(req: Request) {
 
     const data = await response.json();
 
-    // In Paddle Billing, automatically-collected transactions include a checkout payment link 
-    // returned as checkout.url if there is a default payment link configured.
+    const transactionId = data?.data?.id;
     let checkoutUrl = data?.data?.checkout?.url;
 
     if (!checkoutUrl) {
       // If still missing, fallback to transaction ID payment link
-      const transactionId = data?.data?.id;
       if (transactionId) {
         checkoutUrl = `https://checkout.paddle.com/checkout/transactions/${transactionId}`;
       } else {
@@ -115,7 +113,7 @@ export async function POST(req: Request) {
       }
     }
 
-    return NextResponse.json({ url: checkoutUrl });
+    return NextResponse.json({ url: checkoutUrl, transactionId });
   } catch (error) {
     console.error('Checkout error:', error);
     return NextResponse.json(
