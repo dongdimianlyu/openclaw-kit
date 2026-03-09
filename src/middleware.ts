@@ -3,15 +3,21 @@ import type { NextRequest } from 'next/server'
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
 
 export async function middleware(request: NextRequest) {
-  let response = NextResponse.next({
+  let supabaseResponse = NextResponse.next({
     request: {
       headers: request.headers,
     },
   })
 
+  // Skip supabase initialization if environment variables are missing
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    console.warn('Missing Supabase environment variables in middleware. Bypassing auth check.')
+    return supabaseResponse
+  }
+
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     {
       cookies: {
         get(name: string) {
@@ -23,12 +29,12 @@ export async function middleware(request: NextRequest) {
             value,
             ...options,
           })
-          response = NextResponse.next({
+          supabaseResponse = NextResponse.next({
             request: {
               headers: request.headers,
             },
           })
-          response.cookies.set({
+          supabaseResponse.cookies.set({
             name,
             value,
             ...options,
@@ -40,12 +46,12 @@ export async function middleware(request: NextRequest) {
             value: '',
             ...options,
           })
-          response = NextResponse.next({
+          supabaseResponse = NextResponse.next({
             request: {
               headers: request.headers,
             },
           })
-          response.cookies.set({
+          supabaseResponse.cookies.set({
             name,
             value: '',
             ...options,
@@ -74,7 +80,7 @@ export async function middleware(request: NextRequest) {
   }
 
   // Admin route protection
-  if (request.nextUrl.pathname.startsWith('/admin') && session) {
+  if (request.nextUrl.pathname.startsWith('/admin') && session?.user) {
     const { data: user } = await supabase
       .from('users')
       .select('is_admin')
@@ -86,7 +92,7 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  return response
+  return supabaseResponse
 }
 
 export const config = {
