@@ -32,8 +32,8 @@ export async function POST(req: Request) {
       );
     }
 
-    // Normalize API key in case env already includes a "Bearer" prefix.
-    const paddleApiKey = PADDLE_API_KEY.replace(/^Bearer\s+/i, '').trim();
+    // Normalize API key in case env already includes a "Bearer" prefix or surrounding quotes.
+    const paddleApiKey = PADDLE_API_KEY.replace(/^Bearer\s+/i, '').replace(/^"|"$/g, '').trim();
 
     const priceIdPattern = /^pri_[a-z\d]{26}$/;
     if (!priceIdPattern.test(PADDLE_PRICE_ID)) {

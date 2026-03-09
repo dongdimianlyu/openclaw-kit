@@ -1,5 +1,5 @@
 export async function inviteToGithubRepo(username: string) {
-  const token = process.env.GITHUB_TOKEN;
+  const token = process.env.GITHUB_TOKEN?.replace(/^"|"$/g, '').trim();
   const owner = process.env.GITHUB_OWNER;
   const repo = process.env.GITHUB_REPO;
 
