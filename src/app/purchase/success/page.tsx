@@ -18,11 +18,11 @@ export default function PurchaseSuccessPage() {
           </div>
           
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 mb-4">
-            Payment Successful!
+            Payment successful.
           </h1>
           
           <p className="text-slate-600 mb-8">
-            Thank you for purchasing {appConfig.name}. Your repository invitation is being processed.
+            A GitHub repository invite has been sent to your account. Please check your GitHub notifications or email.
           </p>
           
           <div className="bg-slate-50 rounded-xl p-6 text-left mb-8 space-y-4">

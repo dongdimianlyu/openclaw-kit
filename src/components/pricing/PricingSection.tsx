@@ -1,16 +1,32 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/input';
 import { Github, Check } from 'lucide-react';
 
 export function PricingSection() {
   const [githubUsername, setGithubUsername] = useState('');
   const [error, setError] = useState('');
+  const router = useRouter();
 
   const handlePurchase = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('Checkout coming soon — we are currently setting up our payment system.');
+    setError('');
+
+    if (!githubUsername) {
+      setError('Please enter your GitHub username');
+      return;
+    }
+
+    // Validate GitHub username format locally before redirect
+    const githubUsernameRegex = /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i;
+    if (!githubUsernameRegex.test(githubUsername)) {
+      setError('Invalid GitHub username format');
+      return;
+    }
+
+    router.push(`/checkout?github=${encodeURIComponent(githubUsername)}`);
   };
 
   const features = [
