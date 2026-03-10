@@ -9,7 +9,7 @@ import {
   Users, 
   CreditCard, 
   Activity,
-  Shovel,
+  Layers,
   LogOut
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -50,7 +50,7 @@ export function Sidebar({ isAdmin = false }: { isAdmin?: boolean }) {
     <div className="flex h-full w-64 flex-col border-r bg-slate-50">
       <div className="flex h-16 items-center px-6 border-b bg-white">
         <Link href="/" className="flex items-center space-x-2">
-          <Shovel className={`h-6 w-6 text-${primaryColor}-600`} />
+          <Layers className={`h-6 w-6 text-${primaryColor}-600`} />
           <span className="text-xl font-bold">{appConfig.name}</span>
         </Link>
       </div>

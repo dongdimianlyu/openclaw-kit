@@ -1,6 +1,6 @@
-# OpenClaw Shovel 🚀
+# OpenClaw Wrapper Dev Kit 🚀
 
-The ultimate foundational SaaS boilerplate built with Next.js App Router, React, TypeScript, and Tailwind CSS. OpenClaw Shovel provides a robust starting point for modern web applications with a focus on AI integrations, Stripe billing, and Telegram bots.
+The ultimate foundational SaaS boilerplate built with Next.js App Router, React, TypeScript, and Tailwind CSS. OpenClaw Wrapper Dev Kit provides a robust starting point for modern web applications with a focus on AI integrations, Stripe billing, and Telegram bots.
 
 ## 🌟 Features
 
@@ -63,7 +63,7 @@ src/
 
 ## 🎨 White-Label Customization
 
-OpenClaw Shovel is designed to be easily rebranded. You can customize the application name, description, company name, and primary theme color without changing code by setting the following environment variables in your `.env.local` or production environment:
+OpenClaw Wrapper Dev Kit is designed to be easily rebranded. You can customize the application name, description, company name, and primary theme color without changing code by setting the following environment variables in your `.env.local` or production environment:
 
 ```env
 NEXT_PUBLIC_APP_NAME="Your App Name"
@@ -76,7 +76,7 @@ The application will automatically pick up these variables and update the UI acc
 
 ## 🚢 Deployment (Fly.io)
 
-OpenClaw Shovel includes an automated deployment script for [Fly.io](https://fly.io/).
+ClawKit includes an automated deployment script for [Fly.io](https://fly.io/).
 
 1. Ensure you have the [Fly CLI](https://fly.io/docs/hands-on/install-flyctl/) installed and are logged in (`fly auth login`).
 2. Run the deployment script:

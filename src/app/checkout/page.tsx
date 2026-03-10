@@ -117,7 +117,7 @@ function CheckoutContent() {
         <div className="space-y-6">
           <div className="flex justify-between items-center pb-4 border-b border-white/5">
             <div>
-              <div className="font-medium text-white">OpenClaw Dev Kit</div>
+              <div className="font-medium text-white">ClawKit</div>
               <div className="text-sm text-slate-400 mt-1">Full source code access</div>
             </div>
             <span className="font-medium text-white">$129</span>
@@ -196,26 +196,24 @@ export default function CheckoutPage() {
       <div className="absolute inset-0 bg-ultra z-0"></div>
       <div className="particle-bg z-0 mix-blend-overlay"></div>
 
-      <div className="relative z-10 flex flex-col min-h-screen items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-md w-full space-y-10">
-          <div className="text-center">
-            <h1 className="text-4xl font-medium tracking-tight sm:text-5xl mb-4">
-              <span className="landing-text-gradient">Secure Checkout</span>
-            </h1>
-            <p className="text-lg text-slate-300">
-              You&apos;re one step away from full access.
-            </p>
+      <main className="flex-1 py-16 sm:py-24">
+        <div className="mx-auto max-w-lg px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8 inline-flex items-center justify-center p-3 bg-blue-500/10 rounded-full">
+            <Github className="h-8 w-8 text-blue-400" />
           </div>
-
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
+            Complete your purchase
+          </h1>
           <Suspense fallback={
-            <div className="flex justify-center p-12">
-              <Loader2 className="w-8 h-8 animate-spin text-blue-400" />
+            <div className="animate-pulse space-y-4 max-w-sm mx-auto">
+              <div className="h-4 bg-white/10 rounded w-3/4 mx-auto"></div>
+              <div className="h-4 bg-white/10 rounded w-1/2 mx-auto"></div>
             </div>
           }>
             <CheckoutContent />
           </Suspense>
         </div>
-      </div>
+      </main>
     </div>
   );
 }

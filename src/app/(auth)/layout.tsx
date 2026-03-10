@@ -13,7 +13,7 @@ export default function AuthLayout({
           <Shovel className="h-10 w-10 text-blue-600" />
         </Link>
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-slate-900">
-          OpenClaw Shovel
+          ClawKit
         </h2>
       </div>
 

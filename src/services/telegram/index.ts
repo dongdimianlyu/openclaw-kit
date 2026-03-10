@@ -34,7 +34,7 @@ export const telegramService = {
         
       const pref = prefData as unknown as { preferred_model: string | null; telegram_open_dm: boolean };
       if (!pref?.telegram_open_dm) {
-        return "DM mode is currently disabled in your OpenClaw Shovel dashboard.";
+        return "DM mode is currently disabled in your ClawKit dashboard.";
       }
 
       const modelId = pref?.preferred_model;

@@ -26,11 +26,11 @@ export default function Home() {
                   🚀 The Ultimate AI SaaS Starter Kit
                 </div>
                 <h1 className="text-5xl font-medium tracking-tight sm:text-6xl lg:text-7xl mb-6">
-                  Skip the setup.<br/>
-                  <span className="landing-text-gradient">Start building your AI App today.</span>
+                  Skip the setup<br/>
+                  <span className="landing-text-gradient">Build Your ClawKit Wrapper 3x Faster</span>
                 </h1>
                 <p className="mt-6 text-lg text-slate-300 sm:text-xl max-w-2xl mx-auto mb-10">
-                  Get full source code access to a production-ready Next.js boilerplate complete with Authentication, Stripe Billing, AI Provider routing, and Telegram Bot integration.
+                  Don’t waste time building OAuth, payments, and deployment from ground up. Get a ClawKit that lets you launch and monetize immediately.
                 </p>
                 
                 <Link href="#pricing">
@@ -43,6 +43,103 @@ export default function Home() {
           </section>
 
           <BuiltWith />
+
+          {/* Comparison Section */}
+          <section className="py-20 sm:py-32 bg-black/40 backdrop-blur-md border-y border-white/5 relative z-10">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-2xl sm:text-center mb-16">
+                <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
+                  Launch a ClawKit Wrapper Without Weeks of Setup
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-slate-300">
+                  Starting a ClawKit wrapper business normally requires building the entire SaaS foundation yourself — authentication, payments, deployment infrastructure, and integrations.
+                </p>
+                <p className="mt-4 text-lg leading-8 text-slate-300 font-medium">
+                  ClawKit gives you the entire foundation ready to customize and launch.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                {/* Without Dev Kit */}
+                <div className="rounded-2xl border border-red-500/20 bg-red-500/5 p-8 backdrop-blur-sm">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500/20 text-red-400">
+                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">If You Build Everything Yourself</h3>
+                  </div>
+                  <p className="text-sm font-medium text-red-400 mb-8">Expect several weeks of development</p>
+                  
+                  <ul className="space-y-4">
+                    {[
+                      'Initialize a Next.js + TypeScript + Tailwind project and configure the architecture',
+                      'Implement Google OAuth authentication and persistent user sessions',
+                      'Integrate subscription billing with Stripe or Lemon Squeezy, including checkout flows and webhooks',
+                      'Develop an admin dashboard for monitoring users and platform activity',
+                      'Set up Supabase authentication, database schema, and row-level security',
+                      'Configure cloud hosting and automated deployment infrastructure',
+                      'Handle SSL certificates and HTTPS configuration',
+                      'Add AI model integrations such as OpenAI and Anthropic',
+                      'Build Telegram bot functionality for user interaction',
+                      'Implement secure storage and encryption for API keys',
+                      'Write documentation, setup scripts, and onboarding instructions'
+                    ].map((item, i) => (
+                      <li key={i} className="flex gap-3 text-slate-300">
+                        <span className="text-red-400 flex-shrink-0 mt-0.5">✗</span>
+                        <span className="text-sm leading-6">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* With Dev Kit */}
+                <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-8 backdrop-blur-sm shadow-[0_0_30px_rgba(16,185,129,0.1)]">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
+                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">With ClawKit</h3>
+                  </div>
+                  <p className="text-sm font-medium text-emerald-400 mb-8">Go from idea to launch in days</p>
+                  
+                  <ul className="space-y-4 mb-10">
+                    {[
+                      'Clone the repository and configure your environment variables',
+                      'Connect your preferred billing provider along with your Supabase and Fly.io accounts',
+                      'Run the setup script and deploy your wrapper'
+                    ].map((item, i) => (
+                      <li key={i} className="flex gap-3 text-slate-200">
+                        <span className="text-emerald-400 flex-shrink-0 mt-0.5">✓</span>
+                        <span className="text-sm leading-6">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="border-t border-emerald-500/20 pt-8">
+                    <h4 className="text-xs font-semibold tracking-wider text-emerald-400 uppercase mb-6">What You Get After Setup</h4>
+                    <ul className="space-y-4">
+                      {[
+                        'A fully deployed ClawKit wrapper SaaS capable of accepting payments',
+                        'A built-in admin dashboard to manage users and platform data',
+                        'Complete source code ownership with no vendor lock-in',
+                        'A production-ready stack with automatic HTTPS, SEO support, and health monitoring',
+                        'Pre-built integrations for AI models, authentication, payments, and infrastructure'
+                      ].map((item, i) => (
+                        <li key={i} className="flex gap-3 text-slate-200">
+                          <span className="text-emerald-400 flex-shrink-0 mt-0.5">✓</span>
+                          <span className="text-sm leading-6">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Features Grid */}
           <section className="py-20 sm:py-32">

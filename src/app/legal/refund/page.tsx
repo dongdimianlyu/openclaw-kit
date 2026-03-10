@@ -16,12 +16,12 @@ export default function RefundPage() {
           <p className="text-slate-500">Last updated: March 8, 2026</p>
 
           <h2 className="font-bold mt-6">1. Overview</h2>
-          <p>OpenClaw Dev Kit is a digital software product that provides access to a private source code repository.</p>
+          <p>ClawKit is a digital software product that provides access to a private source code repository.</p>
           <p>Because the Product is delivered digitally and access is granted immediately after purchase, refunds are limited.</p>
-          <p>By purchasing OpenClaw Dev Kit, you acknowledge and agree to the terms described in this Refund Policy.</p>
+          <p>By purchasing ClawKit, you acknowledge and agree to the terms described in this Refund Policy.</p>
 
           <h2 className="font-bold mt-6">2. No Refunds for Digital Product Delivery</h2>
-          <p>All purchases of OpenClaw Dev Kit are generally final and non-refundable.</p>
+          <p>All purchases of ClawKit are generally final and non-refundable.</p>
           <p>After payment is completed, customers receive access to the Product’s source code repository. Since digital source code cannot be returned once access has been granted, refunds are typically not possible.</p>
           <p>Refunds will not be issued for reasons including but not limited to:</p>
           <p>Change of mind after purchase</p>
@@ -30,7 +30,7 @@ export default function RefundPage() {
           <p>Incompatibility with your hosting environment or third-party services</p>
           <p>Bugs, errors, or missing features</p>
           <p>Business results, revenue expectations, or product performance</p>
-          <p>OpenClaw Dev Kit is sold as a developer starter kit, and buyers are responsible for configuring and customizing the software for their own use.</p>
+          <p>ClawKit is sold as a developer starter kit, and buyers are responsible for configuring and customizing the software for their own use.</p>
 
           <h2 className="font-bold mt-6">3. Exceptions</h2>
           <p>Refunds may be granted in limited circumstances, such as:</p>
@@ -48,7 +48,7 @@ export default function RefundPage() {
           <p>Refund requests are reviewed on a case-by-case basis.</p>
 
           <h2 className="font-bold mt-6">5. Payment Processor</h2>
-          <p>Payments for OpenClaw Dev Kit are processed through Paddle.</p>
+          <p>Payments for ClawKit are processed through Paddle.</p>
           <p>Refunds, if approved, will be issued through Paddle using the original payment method.</p>
           <p>Processing times may vary depending on the payment provider and your financial institution.</p>
 

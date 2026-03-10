@@ -1,8 +1,9 @@
+// This script sets up a new fly app and deploys ClawKit
 import { execSync } from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
 
-console.log('🚀 Starting OpenClaw Shovel Deployment to Fly.io');
+console.log('🚀 Starting ClawKit Deployment to Fly.io');
 
 const checkCommand = (cmd: string, name: string) => {
   try {

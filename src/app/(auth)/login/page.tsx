@@ -47,7 +47,7 @@ export default function LoginPage() {
       <div className="text-center">
         <h3 className="text-lg font-medium">Sign in to your account</h3>
         <p className="text-sm text-slate-500 mt-1">
-          Welcome back to OpenClaw Shovel
+          Welcome back to ClawKit
         </p>
       </div>
 

@@ -17,12 +17,12 @@ export default function TermsPage() {
           <p className="text-slate-500">Last updated: March 8, 2026</p>
 
           <h2 className="font-bold mt-6">1. Acceptance of Terms</h2>
-          <p>By purchasing, downloading, or using OpenClaw Dev Kit ("Product"), you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, do not purchase or use the Product.</p>
-          <p>These Terms of Service constitute a legally binding agreement between you and the seller of OpenClaw Dev Kit ("we," "us," or "our").</p>
+          <p>By purchasing, downloading, or using ClawKit ("Product"), you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, do not purchase or use the Product.</p>
+          <p>These Terms of Service constitute a legally binding agreement between you and the seller of ClawKit ("we," "us," or "our").</p>
 
           <h2 className="font-bold mt-6">2. Description of the Product</h2>
           <p>Please read before purchasing.</p>
-          <p>OpenClaw Dev Kit is a developer starter kit and SaaS boilerplate that provides source code intended to help developers launch software products faster.</p>
+          <p>ClawKit is a developer starter kit and SaaS boilerplate that provides source code intended to help developers launch software products faster.</p>
           <p>It is not a finished product or hosted service.</p>
           <p>The Product is provided “as is” and may require setup, configuration, debugging, and customization to function in your environment.</p>
           <p>By purchasing the Product, you acknowledge that the software may require technical knowledge to deploy and operate.</p>
@@ -43,7 +43,7 @@ export default function TermsPage() {
           <p>Updates may be provided at our discretion and are not guaranteed on any schedule.</p>
 
           <h2 className="font-bold mt-6">3. What the Product Does NOT Include</h2>
-          <p>To avoid misunderstanding, OpenClaw Dev Kit does not include:</p>
+          <p>To avoid misunderstanding, ClawKit does not include:</p>
           <ul>
             <li>Hosting or infrastructure services</li>
             <li>Cloud accounts or third-party service subscriptions</li>
@@ -54,7 +54,7 @@ export default function TermsPage() {
           <p>You must provide your own accounts for services such as hosting, databases, payment processors, APIs, domains, and any other infrastructure required to run your application.</p>
 
           <h2 className="font-bold mt-6">4. Developer Responsibility</h2>
-          <p>OpenClaw Dev Kit is intended for developers or technical users.</p>
+          <p>ClawKit is intended for developers or technical users.</p>
           <p>By purchasing the Product, you acknowledge that you have the technical ability to use it, or that you will work with someone who does.</p>
           <p>You are solely responsible for:</p>
           <ul>
@@ -70,10 +70,10 @@ export default function TermsPage() {
 
           <h2 className="font-bold mt-6">5. Payment and Billing</h2>
           <h3 className="font-bold mt-4">5.1 Payment Processing</h3>
-          <p>Payments for OpenClaw Dev Kit are processed by a third-party payment processor. By making a purchase, you agree to provide accurate payment information and comply with the payment provider’s terms and policies.</p>
+          <p>Payments for ClawKit are processed by a third-party payment processor. By making a purchase, you agree to provide accurate payment information and comply with the payment provider’s terms and policies.</p>
           <p>We do not store full credit card details.</p>
           <h3 className="font-bold mt-4">5.2 Pricing</h3>
-          <p>OpenClaw Dev Kit is sold as a one-time purchase.</p>
+          <p>ClawKit is sold as a one-time purchase.</p>
           <p>We reserve the right to change pricing at any time. Price changes will not affect purchases already completed.</p>
           <p>Promotions or discounts may be offered at our discretion.</p>
 
@@ -85,7 +85,7 @@ export default function TermsPage() {
           <p>jiarenlyu@gmail.com</p>
 
           <h2 className="font-bold mt-6">7. No Guarantee of Results</h2>
-          <p>Purchasing OpenClaw Dev Kit does not guarantee business success, revenue, or profitability.</p>
+          <p>Purchasing ClawKit does not guarantee business success, revenue, or profitability.</p>
           <p>The outcome of any product built using this software depends entirely on factors outside our control, including execution, marketing, competition, and market conditions.</p>
           <p>You accept full responsibility for any business decisions made using the Product.</p>
 
@@ -98,9 +98,43 @@ export default function TermsPage() {
             <li>AI API providers (such as OpenAI or Anthropic)</li>
             <li>Messaging platforms such as Telegram</li>
           </ul>
-          <p>Your use of these services is governed by their own terms and policies.</p>
-          <p>We are not responsible for the availability, pricing, or behavior of third-party services.</p>
-          <p>Changes to these services may affect the Product’s functionality.</p>
+          <p>You are solely responsible for testing and validating the software before deploying it in a production environment.</p>
+
+          <h2 className="font-bold mt-6">8. Limitation of Liability</h2>
+          <p>In no event shall the seller of ClawKit be liable for any direct, indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+          <ul>
+            <li>loss of profits</li>
+            <li>loss of data</li>
+            <li>business interruption</li>
+            <li>security vulnerabilities</li>
+            <li>issues caused by third-party services</li>
+          </ul>
+          <p>Upon purchase, you are granted a non-exclusive, non-transferable license to use ClawKit in accordance with these terms.</p>
+
+          <h3 className="font-bold mt-4">3.1 Permitted Uses</h3>
+          <p>You may:</p>
+          <ul>
+            <li>Use the Product to create unlimited personal or commercial projects.</li>
+            <li>Modify, adapt, and build upon the source code for your own projects.</li>
+            <li>Deploy applications built with the Product to the internet and monetize them.</li>
+            <li>Use the Product to build services for your clients, provided you do not transfer the raw source code itself to the client (unless the client also purchases their own license).</li>
+          </ul>
+
+          <h3 className="font-bold mt-4">3.2 Restrictions</h3>
+          <p>You may NOT:</p>
+          <ul>
+            <li>Resell, sublicense, distribute, or share the ClawKit source code, repository access, or boilerplate as a product in itself.</li>
+            <li>Create a competing boilerplate, starter kit, or template using the Product.</li>
+            <li>Publish the source code in a public repository (e.g., a public GitHub repo).</li>
+            <li>Share your access credentials to the private repository with others who have not purchased the Product.</li>
+          </ul>
+
+          <h2 className="font-bold mt-6">4. Intellectual Property</h2>
+          <p>ClawKit and all associated source code, designs, documentation, and materials remain the intellectual property of the seller.</p>
+          <p>Your purchase grants you a license to use the code, but ownership of the original copyrighted materials remains with us.</p>
+
+          <h2 className="font-bold mt-6">5. Updates and Support</h2>
+          <p>Lifetime Updates: Your purchase includes access to future updates to the ClawKit repository.</p>
 
           <h2 className="font-bold mt-6">9. Updates and Maintenance</h2>
           <p>We may release updates, improvements, or bug fixes to the Product.</p>
@@ -162,7 +196,7 @@ export default function TermsPage() {
           <p>Your continued use of the Product after updates constitutes acceptance of the revised Terms.</p>
 
           <h2 className="font-bold mt-6">17. Entire Agreement</h2>
-          <p>These Terms of Service, together with the Privacy Policy and any applicable license terms, constitute the entire agreement between you and us regarding OpenClaw Dev Kit.</p>
+          <p>These Terms of Service, together with the Privacy Policy and any applicable license terms, constitute the entire agreement between you and us regarding ClawKit.</p>
 
           <h2 className="font-bold mt-6">18. Contact</h2>
           <p>If you have questions about these Terms, contact:</p>

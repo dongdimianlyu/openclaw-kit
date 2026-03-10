@@ -8,7 +8,7 @@ export const stripe = stripeSecretKey
       // @ts-expect-error Stripe API versions vary depending on installed types. Bypassing strictly typed versions here.
       apiVersion: '2023-10-16',
       appInfo: {
-        name: 'OpenClaw Shovel',
+        name: 'ClawKit',
         version: '0.1.0',
       },
     })

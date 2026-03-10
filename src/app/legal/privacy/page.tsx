@@ -17,15 +17,15 @@ export default function PrivacyPage() {
           <p className="text-slate-500">Last updated: March 8, 2026</p>
 
           <h2 className="font-bold mt-6">1. Introduction</h2>
-          <p>Welcome to OpenClaw Dev Kit (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and purchase our Product.</p>
-          <p>OpenClaw Dev Kit is a developer starter kit that provides source code for launching software products.</p>
+          <p>Welcome to ClawKit (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and purchase our Product.</p>
+          <p>ClawKit is a developer starter kit that provides source code for launching software products.</p>
           <p>We are committed to protecting your privacy and handling your data transparently.</p>
           <p>By using our website or purchasing the Product, you agree to the practices described in this Privacy Policy.</p>
           <p>If you do not agree with this Privacy Policy, please do not use the website or purchase the Product.</p>
 
           <h2 className="font-bold mt-6">2. Information We Collect</h2>
           <h3 className="font-bold mt-4">2.1 Information You Provide</h3>
-          <p>When you purchase OpenClaw Dev Kit, we collect only the information necessary to process your purchase and deliver the Product.</p>
+          <p>When you purchase ClawKit, we collect only the information necessary to process your purchase and deliver the Product.</p>
           <p>This may include:</p>
           <p>Email address<br />Used to send purchase confirmations and product access instructions.</p>
           <p>Name<br />If provided during checkout.</p>
@@ -45,30 +45,25 @@ export default function PrivacyPage() {
           <p>This information helps us understand how visitors use the website and improve the service.</p>
 
           <h2 className="font-bold mt-6">3. How We Use Your Information</h2>
-          <p>We use the information we collect for the following purposes:</p>
-          <ul>
-            <li>To process and deliver your purchase</li>
-            <li>To send repository access instructions</li>
-            <li>To send purchase confirmations</li>
-            <li>To provide product updates or important notices</li>
-            <li>To respond to customer inquiries or support requests</li>
-            <li>To maintain and improve the website</li>
-          </ul>
+          <p>We use the information we collect primarily to deliver the Product and communicate with you. Specifically, we use your data to:</p>
+          <p>Process your payment (via our payment processor).</p>
+          <p>Grant you access to the ClawKit private GitHub repository.</p>
+          <p>Send you purchase confirmations, receipts, and invoices.</p>
+          <p>Provide customer support and respond to your inquiries.</p>
+          <p>Send you important technical updates regarding the Product.</p>
+          <p>We do not use your information for marketing purposes without your explicit consent.</p>
+
+          <h2 className="font-bold mt-6">4. How We Share Your Information</h2>
           <p>We do not sell, rent, or trade your personal information to third parties.</p>
-          <p>We do not send marketing emails unless you explicitly opt in.</p>
+          <p>We only share your information with trusted third-party service providers necessary to operate our business and deliver the Product:</p>
+          <p>Payment Processors: We use Paddle to handle all financial transactions. We do not process or store your credit card data ourselves.</p>
+          <p>GitHub: We use your GitHub username to grant you access to the ClawKit private repository.</p>
+          <p>Email Providers: We use third-party email services to send transactional emails (receipts, support replies).</p>
+          <p>These providers have their own privacy policies governing how they handle your data.</p>
 
-          <h2 className="font-bold mt-6">4. Payment Processing</h2>
-          <p>All payments for OpenClaw Dev Kit are processed by Paddle.</p>
-          <p>When you purchase the Product, your payment information is handled entirely by Paddle’s secure payment infrastructure.</p>
-          <p>We do not store or have access to your full credit card details.</p>
-          <p>Your use of Paddle’s payment services is governed by Paddle’s own privacy policy and terms.</p>
-
-          <h2 className="font-bold mt-6">5. Data Sharing and Disclosure</h2>
-          <p>We may share your information only in the following situations:</p>
-          <p><strong>Payment Processing</strong><br />Information necessary to complete a transaction is shared with Paddle.</p>
-          <p><strong>Repository Access</strong><br />Your GitHub username may be used to send an invitation through the GitHub API so that you can access the Product repository.</p>
-          <p><strong>Legal Requirements</strong><br />We may disclose information if required by law or in response to valid legal requests from authorities.</p>
-          <p><strong>Business Transfers</strong><br />If the business operating OpenClaw Dev Kit is sold, merged, or otherwise transferred, your information may be transferred as part of that transaction.</p>
+          <h2 className="font-bold mt-6">5. Data Retention</h2>
+          <h3 className="font-bold mt-4">5.1 Retention</h3>
+          <p><strong>Business Transfers</strong><br />If the business operating ClawKit is sold, merged, or otherwise transferred, your information may be transferred as part of that transaction.</p>
 
           <h2 className="font-bold mt-6">6. Data Retention</h2>
           <h3 className="font-bold mt-4">6.1 Retention</h3>
@@ -90,8 +85,8 @@ export default function PrivacyPage() {
           <p>Cookies are small files stored on your device that help websites remember user preferences and understand how visitors interact with the site.</p>
           <p>You can disable cookies through your browser settings, though some features of the website may not function properly.</p>
 
-          <h2 className="font-bold mt-6">8. Products Built Using OpenClaw Dev Kit</h2>
-          <p>OpenClaw Dev Kit is a software starter kit that you may use to build your own applications.</p>
+          <h2 className="font-bold mt-6">8. Products Built Using ClawKit</h2>
+          <p>ClawKit is a software starter kit that you may use to build your own applications.</p>
           <p>When you deploy products built with the Dev Kit, your own users’ data will be handled by the services you configure.</p>
           <p>These may include services such as:</p>
           <ul>
@@ -128,7 +123,7 @@ export default function PrivacyPage() {
           <p>Therefore, we cannot guarantee absolute security.</p>
 
           <h2 className="font-bold mt-6">11. Children's Privacy</h2>
-          <p>OpenClaw Dev Kit is not intended for individuals under the age of 18.</p>
+          <p>ClawKit is not intended for individuals under the age of 18.</p>
           <p>We do not knowingly collect personal information from children.</p>
           <p>If you believe we have collected personal data from a minor, please contact us and we will remove the information.</p>
 
