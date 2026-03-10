@@ -59,7 +59,7 @@ export function PricingSection() {
             <p className="text-xs font-medium tracking-widest text-slate-400 uppercase mb-3">ONE-TIME PAYMENT</p>
             <div className="flex items-center justify-center gap-x-3">
               <span className="text-3xl font-semibold tracking-tight text-slate-500 line-through">$299</span>
-              <span className="text-5xl font-bold tracking-tight text-white">$149</span>
+              <span className="text-5xl font-bold tracking-tight text-white">$129</span>
             </div>
           </div>
           
